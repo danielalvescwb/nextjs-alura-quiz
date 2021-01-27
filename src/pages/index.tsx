@@ -1,4 +1,6 @@
-import {HomeContainer, HomeContent} from '../components/Home/styles'
+import {useRouter} from 'next/router'
+import {useState, useCallback} from 'react'
+import {HomeContent} from '../components/Home/styles'
 import Logo from '../components/Home/Logo'
 import GitHubCorner from '../components/GitHubCorner'
 import Footer from '../components/Footer'
@@ -7,11 +9,27 @@ import {
   HomeWidgetHeader,
   HomeWidgetContent,
 } from '../components/Home/Widget/styles'
-import {bg, title, description} from '../data/db.json'
+import {Button} from '../components/Button/styles'
+import Input from '../components/Input/index'
+import {title, description} from '../data/db.json'
 
 export default function Home(): JSX.Element {
+  const router = useRouter()
+  const [name, setName] = useState('')
+
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault()
+      router.push(`/quiz/${name}`)
+    },
+    [name],
+  )
+  const handleChangeName = useCallback((e) => {
+    setName(e.target.value)
+  }, [])
+
   return (
-    <HomeContainer backgroundImage={bg}>
+    <>
       <HomeContent>
         <Logo className="logo" />
         <HomeWidget>
@@ -20,6 +38,15 @@ export default function Home(): JSX.Element {
           </HomeWidgetHeader>
           <HomeWidgetContent>
             <p>{description}</p>
+            <form onSubmit={handleSubmit}>
+              <Input
+                onChange={handleChangeName}
+                placeholder="Diz ai seu nome"
+              />
+              <Button type="submit" disabled={name.length === 0}>
+                Jogar
+              </Button>
+            </form>
           </HomeWidgetContent>
         </HomeWidget>
         <HomeWidget>
@@ -38,7 +65,7 @@ export default function Home(): JSX.Element {
         </HomeWidget>
         <Footer />
       </HomeContent>
-      <GitHubCorner projectUrl="https://github.com/omariosouto" />
-    </HomeContainer>
+      <GitHubCorner projectUrl="https://github.com/danielalvescwb/nextjs-alura-quiz" />
+    </>
   )
 }
