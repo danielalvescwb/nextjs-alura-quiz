@@ -1,7 +1,7 @@
 {
-  "bg": "./background.jpg",
-  "title": "Lorem Ipsum",
-  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "bg": "/background.jpg",
+  "title": "Conhece o Mario?",
+  "description": "Teste seu conhecimentos",
   "questions": [
     {
       "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
@@ -24,16 +24,28 @@
          "background: linear-gradient(#e66465, #9198e5);",
          "background: gradient(#e66465, #9198e5);"
       ]
+    },
+    {
+      "image": "https://media.giphy.com/media/1iTX8iA3RZ9YTWuI/giphy.gif",
+      "title": "Como fazer um background gradiente com css?",
+      "description": "Faz tempo em haha",
+      "answer": 0,
+      "alternatives": [
+         "background: linear-gradient(#e66465, #9198e5);",
+         "background: gradient(#e66465, #9198e5);"
+      ]
     }
   ],
+
   "external": [
-    ""
+    "https://aluraquiz-css.omariosouto.vercel.app/",
+    "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
   ],
   "theme": {
     "colors": {
-      "primary": "#186F77",
+      "primary": "#711111",
       "secondary": "#29b6f6",
-      "mainBg": "#111344",
+      "mainBg": "#2f1307",
       "contrastText": "#FFFBFF",
       "wrong": "#b74d1e",
       "success": "#4CAF50"
