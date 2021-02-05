@@ -1,5 +1,5 @@
 {
-  "bg": "/background.jpg",
+  "bg": "https://nextjs-alura-quiz.vercel.app/bg.jpg",
   "title": "Conhece o Mario?",
   "description": "Teste seu conhecimentos",
   "questions": [
