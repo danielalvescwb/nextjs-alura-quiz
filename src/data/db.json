@@ -4,35 +4,47 @@
   "description": "Teste seu conhecimentos",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
+      "image": "https://nextjs-alura-quiz.vercel.app/img1.jpg",
+      "title": "Qual personagem foi substituído por Mario em seu primeiro jogo?",
+      "description": "Donkey Kong (1981)",
       "answer": 2,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Toad",
+        "Kirby",
+        "Popeye",
+        "Mickey"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
+      "image": "https://media.giphy.com/media/ksjCMQutSkK50WUPhx/giphy.gif",
+      "title": "Com qual parte do corpo Mario quebra tijolos e bônus?",
+      "description": "Mario cabeça dura?",
+      "answer": 1,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "Com o ''bigodon''",
+         "Com a mão",
+         "Com a Cabeça"
       ]
     },
     {
       "image": "https://media.giphy.com/media/1iTX8iA3RZ9YTWuI/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
+      "title": "Qual foi o primeiro nome do Mario?",
+      "description": "Donkey Kong (1981)",
+      "answer": 1,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "Super Plumber",
+         "Jumpman"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/3o6fJ42Ud1rylg4eTS/giphy.gif",
+      "title": "Quem foi o primeiro interesse amoroso do Mario?",
+      "description": "Donkey Kong (1981)",
+      "answer": 2,
+      "alternatives": [
+         "Olivia Palito",
+         "Peach",
+         "Pauline"
       ]
     }
   ],
