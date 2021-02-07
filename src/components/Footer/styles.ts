@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import {transparentize} from 'polished'
 
 export const FooterWrapper = styled.footer`
-  background-color: ${({theme}) => transparentize(0.3, theme.colors.mainBg)};
+  background-color: ${({theme}) =>
+    transparentize(0.3, theme.currentTheme.colors.mainBg)};
   padding: 20px;
   display: flex;
   align-items: center;

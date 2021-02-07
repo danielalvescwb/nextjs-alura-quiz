@@ -1,22 +1,23 @@
-import Head from 'next/head'
 import {ThemeProvider} from 'styled-components'
 import GlobalStyle from '../styles/GlogalStyle'
-
 import {theme, bg} from '../data/db.json'
+import {HooksProvider} from '../hooks'
+import Background from '../components/Background'
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function MyApp({Component, pageProps}) {
+  const t = {
+    currentTheme: theme,
+    bg,
+  }
   return (
     <>
-      <Head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle backgroundImage={bg} />
-        <Component {...pageProps} />
+      <ThemeProvider theme={t}>
+        <GlobalStyle />
+        <HooksProvider>
+          <Background alt="backgound" src="/background.png" />
+          <Component {...pageProps} />
+        </HooksProvider>
       </ThemeProvider>
     </>
   )

@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.a`
   position: absolute;
+  height: 80px;
+  width: 80px;
   top: 0;
   border: 0;
   right: 0;
@@ -9,8 +11,8 @@ export const Wrapper = styled.div`
 `
 
 export const SVGWrapper = styled.svg`
-  fill: ${({theme}) => theme.colors.wrong};
-  color: ${({theme}) => theme.colors.contrastText};
+  fill: ${({theme}) => theme.currentTheme.colors.wrong};
+  color: ${({theme}) => theme.currentTheme.colors.contrastText};
   cursor: pointer;
   &:hover .octo-arm {
     animation: octocat-wave 560ms ease-in-out;

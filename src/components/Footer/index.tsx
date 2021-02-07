@@ -1,8 +1,8 @@
+import {HTMLAttributes} from 'react'
 import {FooterWrapper} from './styles'
 
-export default function Footer(props): JSX.Element {
+const Footer: React.FC<HTMLAttributes<HTMLElement>> = (props) => {
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
       <a href="https://www.alura.com.br/">
         <img
@@ -19,3 +19,4 @@ export default function Footer(props): JSX.Element {
     </FooterWrapper>
   )
 }
+export default Footer

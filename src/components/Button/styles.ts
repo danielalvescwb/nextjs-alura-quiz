@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import {shade} from 'polished'
 
-export const Button = styled.button`
-  background-color: ${({theme}) => theme.colors.secondary};
-  color: ${({theme}) => theme.colors.contrastText};
-  border-radius: ${({theme}) => theme.borderRadius};
+export const Container = styled.button`
+  background-color: ${({theme}) => theme.currentTheme.colors.wrong};
+  color: ${({theme}) => theme.currentTheme.colors.contrastText};
+  border-radius: ${({theme}) => theme.currentTheme.borderRadius};
   border: 0;
   width: 100%;
   padding: 10px 16px;
@@ -14,9 +15,8 @@ export const Button = styled.button`
   outline: 0;
   transition: 0.3s;
   cursor: pointer;
-  &:hover,
-  &:focus {
-    opacity: 0.5;
+  &:hover {
+    background: ${({theme}) => shade(0.2, theme.currentTheme.colors.wrong)};
   }
   &:disabled {
     background-color: #979797;

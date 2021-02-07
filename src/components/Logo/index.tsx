@@ -1,10 +1,10 @@
 import {HomeLogo} from './styles'
 
 interface Iprops {
-  className: string
+  className?: string
 }
 
-export default function Logo({className}: Iprops): JSX.Element {
+const Logo: React.FC<Iprops> = ({className}) => {
   return (
     <HomeLogo
       className={className}
@@ -80,3 +80,4 @@ export default function Logo({className}: Iprops): JSX.Element {
     </HomeLogo>
   )
 }
+export default Logo
