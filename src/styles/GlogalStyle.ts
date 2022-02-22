@@ -22,5 +22,4 @@ export default createGlobalStyle`
     display: flex;
     justify-content: center;
   }
-
 `
